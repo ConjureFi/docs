@@ -12,6 +12,6 @@
 
 * [Deployments](smart-contracts/deployments.md)
 * [ConjureFactory.sol](smart-contracts/conjurefactory.sol.md)
-* [CollateralFactory](smart-contracts/collateralfactory.md)
+* [CollateralFactory.sol](smart-contracts/collateralfactory.md)
 * [IConjure.sol](smart-contracts/iconjure.sol.md)
 
