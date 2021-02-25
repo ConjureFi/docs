@@ -19,3 +19,13 @@
     )
 ```
 
+Initializes the Conjure Asset with mintingFee, the asset Type and all the oracle related data.
+
+### `getPrice`
+
+```text
+function getPrice()
+```
+
+This function calculates the price in regard to the asset type and all the different oracle types.
+
