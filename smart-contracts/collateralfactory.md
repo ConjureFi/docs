@@ -6,11 +6,15 @@
 function setCollateralizationRatio(uint256 ratio)
 ```
 
+Lets a user set a custom collateralization value between 100% and 1000%.
+
 ### `setIssueFeeRate`
 
 ```text
 function setIssueFeeRate(uint256 _issueFeeRate)
 ```
+
+This function lets a user set the Minting Fee. Values from 0 up to 2.5% are accepted.
 
 ### `setMinLoanCollateralSize`
 
@@ -18,11 +22,15 @@ function setIssueFeeRate(uint256 _issueFeeRate)
 function setMinLoanCollateralSize(uint256 _minLoanCollateralSize)
 ```
 
+Lets a user set a custom loan collateral size of their contract.
+
 ### `setAccountLoanLimit`
 
 ```text
 function setAccountLoanLimit(uint256 _loanLimit)
 ```
+
+This function lets the contract creator set a custom account loan limit. Should not excess 1000.
 
 ### `setLiquidationRatio`
 
