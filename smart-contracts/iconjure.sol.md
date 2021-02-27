@@ -1,6 +1,6 @@
 # IConjure.sol
 
-
+The IConjure Interface allows the Collateral Contract to communicate with the Conjure contract in order to mint and burn synths and to get all Conjure related prices.
 
 ```text
 pragma solidity ^0.6.0;
