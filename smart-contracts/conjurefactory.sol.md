@@ -43,13 +43,15 @@ function setEthUsdChainlinkOracle(address neworacle)
 
 
 
+### `setUniswapOracle`
+
 ```text
 function setUniswapOracle(address newunioracle)
 ```
 
 
 
-
+### `burn`
 
 ```text
 function burn(address account, uint amount)
@@ -57,7 +59,7 @@ function burn(address account, uint amount)
 
 
 
-
+### `mint`
 
 ```text
 function mint(address account, uint amount)
@@ -65,7 +67,7 @@ function mint(address account, uint amount)
 
 
 
-
+### `_internalIssue`
 
 ```text
 function _internalIssue(address account, uint amount)
@@ -73,7 +75,7 @@ function _internalIssue(address account, uint amount)
 
 
 
-
+### `_internalBurn`
 
 ```text
 function _internalBurn(address account, uint amount)
@@ -81,7 +83,7 @@ function _internalBurn(address account, uint amount)
 
 
 
-
+### `changeOwner`
 
 ```text
 function changeOwner(address payable _newOwner)
@@ -89,7 +91,7 @@ function changeOwner(address payable _newOwner)
 
 
 
-
+### `collectFees`
 
 ```text
 function collectFees()
@@ -97,7 +99,7 @@ function collectFees()
 
 
 
-
+### `getLatestPrice`
 
 ```text
 function getLatestPrice(AggregatorV3Interface priceFeed)
@@ -105,7 +107,7 @@ function getLatestPrice(AggregatorV3Interface priceFeed)
 
 
 
-
+### `getLatestETHUSDPrice`
 
 ```text
 function getLatestETHUSDPrice()
@@ -113,7 +115,7 @@ function getLatestETHUSDPrice()
 
 
 
-
+### `quickSort`
 
 ```text
 function quickSort(uint[] memory arr, int left, int right)
@@ -121,7 +123,7 @@ function quickSort(uint[] memory arr, int left, int right)
 
 
 
-
+### `getAverage`
 
 ```text
 function getAverage(uint[] memory arr)
@@ -129,7 +131,7 @@ function getAverage(uint[] memory arr)
 
 
 
-
+### `sort`
 
 ```text
 function sort(uint[] memory data)
@@ -137,7 +139,7 @@ function sort(uint[] memory data)
 
 
 
-
+### `sqrt`
 
 ```text
 function sqrt(uint256 y)
@@ -145,7 +147,7 @@ function sqrt(uint256 y)
 
 
 
-
+### `getLatestPrice`
 
 ```text
 function getLatestPrice()
@@ -153,7 +155,7 @@ function getLatestPrice()
 
 
 
-
+### `ConjureMint`
 
 ```text
 function ConjureMint(
@@ -167,7 +169,7 @@ function ConjureMint(
 
 
 
-
+### `newFactoryOwner`
 
 ```text
 function newFactoryOwner(address payable newOwner)
@@ -175,7 +177,7 @@ function newFactoryOwner(address payable newOwner)
 
 
 
-
+### `getFactoryOwner`
 
 ```text
 function getFactoryOwner()
