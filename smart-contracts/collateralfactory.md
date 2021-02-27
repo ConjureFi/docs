@@ -141,17 +141,29 @@ totalFees
 function getLoanCollateralRatio(address _account, uint256 _loanID)
 ```
 
+Returns the current collateralization ratio of a given loan. Calls \_loanCollateralRatio.
+
 ### `_loanCollateralRatio`
 
 ```text
 function _loanCollateralRatio(SynthLoanStruct memory _loan)
 ```
 
+Internal function to return the collateral ratio of a synth loan. Calculated as: collateral value in usd / loan amount in nomination.
+
 ### `openLoan`
 
 ```text
 function openLoan(uint256 _loanAmount)
 ```
+
+This function lets a user open a loan in the system. For any type of loan a user also has to send ETH as t this function. The price is determined by calling the Interface function of the Conjure contract which keeps track of the price.
+
+It is then calculated if the ETH sent is enough to cover the collateral ratio \(default set to 120%\) and then mints the synth to the user. 
+
+If a minting fee was set, 75% of the fee will directly go to the synth creator and 25% will go to the factory owner as a platform fee.
+
+Finally, the newly opened loan is now registered n the system.  
 
 ### `closeLoan`
 
