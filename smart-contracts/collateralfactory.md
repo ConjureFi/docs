@@ -211,6 +211,14 @@ function liquidateLoan(
 )
 ```
 
+If a loan's collateralization ratio falls below the liquidation ratio it is suspect to liquidation. Any address with the needed funds can liquidate the loan partially or fully.
+
+The liquidator sends the debtToCover to the function and the function will calculate if the C-Ratio of the borrower can be fixed. In that case, the liquidation will only happen to a certain extent and fixes the borrower's ratio. If the amount to liquidate exceeds the repay amount only the repay amount will be liquidated.
+
+The liquidator will then redeem the amount to be liquidated in ETH terms and on top they will get a 10% liquidation bonus which is also covered by the borrower's collateral as a penalty.
+
+If the amount of synths to be liquidated is greater or equal to the actual loan amount this function will also trigger a closure of the loan and the remaining collateral will be sent back to the borrower.
+
 ### `_closeLoan`
 
 ```text
