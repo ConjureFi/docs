@@ -4,10 +4,10 @@
 
 ## Protocol
 
-* [Governance](protocol/governance.md)
 * [Conjure Assets](protocol/conjure-assets.md)
 * [Collateral System](protocol/collateral-system.md)
-
+* [Governance](protocol/governance.md)
+* 
 ## Smart Contracts
 
 * [Deployments](smart-contracts/deployments.md)
