@@ -171,17 +171,23 @@ Finally, the newly opened loan is now registered n the system.
 function closeLoan(uint256 loanID)
 ```
 
+Public function, which calls the internal \_closeLoan function.
+
 ### `depositCollateral`
 
 ```text
 function depositCollateral(address account, uint256 loanID)
 ```
 
+In order to increase or fix their C-Ratio users can deposit more ETH as collateral into the contract. The updated C-Ratio will be available as soon as the deposit is confirmed.
+
 ### `withdrawCollateral`
 
 ```text
 function withdrawCollateral(uint256 loanID, uint256 withdrawAmount)
 ```
+
+It is also possible to withdraw collateral from the loan. This is only possible if the C-Ratio after the withdrawal is still above the liquidation ratio.
 
 ### `repayLoan`
 
@@ -192,6 +198,8 @@ function repayLoan(
     uint256 _repayAmount
 )
 ```
+
+If a user wishes to fix their C-Ratio they can also repay parts of their loan. If they have for example 10 synths and a bad C-Ratio of like 130% they can simply repay 5 synths of the loan and the C-Ratio will increase after that and not putting their loans at risk of liquidation.  
 
 ### `liquidateLoan`
 
@@ -213,11 +221,19 @@ function _closeLoan(
 )
 ```
 
+Closes a loan. Internal function and can only be called by the public closeLoan function and the liquidateLoan function.
+
+If it is called public, the value for liquidation is false. In this case, it is checked if the user has the sender has the funds of the synths needed to close the loan. If this is the case the collateral will be unlocked and sent back to the borrower and the synths will be burned to the full extent.
+
+If the function was called from the liquidateLoan function, it will close the loan and send back the remaining collateral to the borrower since the burning of the synths and the loan repayment already happended in the liquidateLoan function. 
+
 ### `_getLoanFromStorage`
 
 ```text
 function _getLoanFromStorage(address account, uint256 loanID)
 ```
+
+Returns a synth loan struct given the account address and the loanID.
 
 ### `_updateLoan`
 
@@ -228,11 +244,15 @@ function _updateLoan(
 )
 ```
 
+This function sets a given loan Amount on a given synth loan.
+
 ### `_updateLoanCollateral`
 
 ```text
 function _updateLoanCollateral(SynthLoanStruct memory _synthLoan, uint256 _newCollateralAmount)
 ```
+
+This function sets a given collateral Amount on a given synth loan.
 
 ### `_recordLoanClosure`
 
@@ -240,11 +260,15 @@ function _updateLoanCollateral(SynthLoanStruct memory _synthLoan, uint256 _newCo
 function _recordLoanClosure(SynthLoanStruct memory synthLoan)
 ```
 
+Sets the closure time of a given loan and decreases the totalOpenLoanCount by 1.
+
 ### `_incrementTotalLoansCounter`
 
 ```text
 function _incrementTotalLoansCounter()
 ```
+
+Increases the totalOpenLoanCount and the totalLoansCreated by 1.
 
 ### `_calculateMintingfee`
 
@@ -252,15 +276,21 @@ function _incrementTotalLoansCounter()
 function _calculateMintingFee(uint256 _ethAmount)
 ```
 
+This function returns the minting fee given a certain ETH amount as an input. Calculates the fee from this amount by separating fee and collateral.
+
 ### `_checkLoanIsOpen`
 
 ```text
 function _checkLoanIsOpen(SynthLoanStruct memory _synthLoan)
 ```
 
+Checks if the loan is already opened \(ID greater than 0\) and if the timeClosed attribute is still 0.
+
 ### `syntharb`
 
 ```text
 function syntharb()
 ```
+
+This function returns the Interface of the IConjure asset.
 
