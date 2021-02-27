@@ -38,10 +38,25 @@ This function lets the contract creator set a custom account loan limit. Should 
 function setLiquidationRatio(uint256 _liquidationRatio)
 ```
 
+Sets a custom liquidation ratio which has to be higher than 100%. Preset at 120%
+
 ### `getContractInfo`
 
 ```text
 function getContractInfo()
+```
+
+Returns all configuration variables of the contract.
+
+```text
+_collateralizationRatio,
+_issuanceRatio,
+_issueFeeRate,
+_minLoanCollateralSize,
+_totalIssuedSynths,
+_totalLoansCreated,
+_totalOpenLoanCount,
+_ethBalance
 ```
 
 ### `issuanceRatio`
@@ -50,11 +65,15 @@ function getContractInfo()
 function issuanceRatio()
 ```
 
+Returns the value of 100 / collateralization ratio.
+
 ### `loanAmountFromCollateral`
 
 ```text
 function loanAmountFromCollateral(uint256 collateralAmount)
 ```
+
+Returns the maximum loan amount which can be taken given a certain collateral amount. Calculated by the collateralAmount \* issuanceRatio \* price of the Asset / current ETH Price.
 
 ### `collateralAmountForLoan`
 
@@ -62,16 +81,32 @@ function loanAmountFromCollateral(uint256 collateralAmount)
 function collateralAmountForLoan(uint256 loanAmount)
 ```
 
+Calculates the amount of collateral needed for a given loan amount. Calculated by the loanAmount \* \(collateralization ratio / current ETH Price \* current Asset Price\)
+
 ### `getMintingFee`
 
 ```text
 function getMintingFee(address _account, uint256 _loanID)
 ```
 
+Gets the minting fee of a given loan.
+
 ### `calculateAmountToLiquidate`
 
 ```text
 function calculateAmountToLiquidate(uint debtBalance, uint collateral)
+```
+
+Calculates the amount to liquidate given a debtBalance and a collateral amount. This will return the amount of synth which can be liquidated in order to fix the C-Ratio of a loan. Returns higher amounts if the C-Ratio drops below 100 + liquidation penalty \(10% in the Conjure Protocol\)
+
+```text
+/**
+ * r = target issuance ratio
+ * D = debt balance
+ * V = Collateral
+ * P = liquidation penalty
+ * Calculates amount of synths = (D - V * r) / (1 - (1 + P) * r)
+ */
 ```
 
 ### `openLoanIDsByAccount`
@@ -80,10 +115,24 @@ function calculateAmountToLiquidate(uint debtBalance, uint collateral)
 function openLoanIDsByAccount(address _account)
 ```
 
+Returns all open loans in the system given an address.
+
 ### `getLoan`
 
 ```text
 function getLoan(address _account, uint256 _loanID)
+```
+
+Returns detailed information about a loan given the account address and the loan id. Returns the following details:
+
+```text
+account
+collateralAmount
+loanAmount
+timeCreated
+loanID
+timeClosed
+totalFees
 ```
 
 ### `getLoanCollateralRatio`
