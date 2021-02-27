@@ -2,7 +2,7 @@
 
 ### Asset Creation Functions
 
-> ### `configure`
+### `init`
 
 ```text
     function init(
