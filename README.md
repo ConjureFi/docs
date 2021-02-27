@@ -1,2 +1,2 @@
-# docs
+# Docs for Conjure Finance
 Docs
