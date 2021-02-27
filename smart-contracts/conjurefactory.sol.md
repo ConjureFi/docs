@@ -21,7 +21,7 @@
 
 Initializes the Conjure Asset with mintingFee, the asset Type, and all the oracle-related data.
 
-This function also mints a new instance of the CollateralFactory for the synth and triggers the initial price calculation via getPrice\(\).
+This function also mints a new instance of the CollateralFactory for the synth and triggers the initial price calculation via getPrice\(\). The array sizes must have equal lengths.
 
 ### `getPrice`
 
@@ -31,7 +31,15 @@ function getPrice()
 
 This function calculates the price in regard to the asset type and all the different oracle types.
 
+The price is calculated as follows:
 
+Check each oracle type on its own \(Chainlink, Uniswap, and custom oracle\)
+
+Check the asset type \(Single, Basket, Index, or Sqrt Index\)
+
+Get the oracle feeds price and norm it in case of mismatching decimals.
+
+Calculate either median price \(single asset\), weighted average price \(basket asset\), or marketcap, sqrt market cap, and divide by the indexdivisor provided.
 
 ### `setEthUsdChainlinkOracle`
 
@@ -39,9 +47,9 @@ This function calculates the price in regard to the asset type and all the diffe
 function setEthUsdChainlinkOracle(address neworacle)
 ```
 
+This function allows setting a new Chainlink price feed oracle for the ETH/USD price Conjure uses.
 
-
-
+Only allowed by the contract owner.
 
 ### `setUniswapOracle`
 
@@ -49,7 +57,9 @@ function setEthUsdChainlinkOracle(address neworacle)
 function setUniswapOracle(address newunioracle)
 ```
 
+It is possible to set a new Uniswap Oracle to use. 
 
+Only allowed by the contract owner.
 
 ### `burn`
 
@@ -57,7 +67,7 @@ function setUniswapOracle(address newunioracle)
 function burn(address account, uint amount)
 ```
 
-
+Interface method to burn synths and can only be called by the Collateral contract instance.
 
 ### `mint`
 
@@ -65,7 +75,7 @@ function burn(address account, uint amount)
 function mint(address account, uint amount)
 ```
 
-
+Interface method to mint synths and can only be called by the Collateral contract instance.
 
 ### `_internalIssue`
 
@@ -73,7 +83,7 @@ function mint(address account, uint amount)
 function _internalIssue(address account, uint amount)
 ```
 
-
+The internal method is called by mint. This function mints the actual Conjure synths.
 
 ### `_internalBurn`
 
@@ -81,7 +91,7 @@ function _internalIssue(address account, uint amount)
 function _internalBurn(address account, uint amount)
 ```
 
-
+The internal method is called by burn. This function burns the actual Conjure synths.
 
 ### `changeOwner`
 
@@ -89,7 +99,7 @@ function _internalBurn(address account, uint amount)
 function changeOwner(address payable _newOwner)
 ```
 
-
+Change owner of the Conjure contract, only callable by the current owner.
 
 ### `collectFees`
 
@@ -97,7 +107,7 @@ function changeOwner(address payable _newOwner)
 function collectFees()
 ```
 
-
+This function lets the owner collect all the fees generated from users minting new synths. This will transfer the contract's ether balance to the owner.
 
 ### `getLatestPrice`
 
@@ -105,7 +115,7 @@ function collectFees()
 function getLatestPrice(AggregatorV3Interface priceFeed)
 ```
 
-
+This function calls the getLatestPrice of an AggregatorV3Interface of Chainlink. Used to determine the latest price of a Chainlink Price Feed. 
 
 ### `getLatestETHUSDPrice`
 
@@ -113,7 +123,7 @@ function getLatestPrice(AggregatorV3Interface priceFeed)
 function getLatestETHUSDPrice()
 ```
 
-
+Always returns the latest ETH/USD price from the used Chainlink price feed. 
 
 ### `quickSort`
 
@@ -121,7 +131,7 @@ function getLatestETHUSDPrice()
 function quickSort(uint[] memory arr, int left, int right)
 ```
 
-
+Function to sort an array.
 
 ### `getAverage`
 
@@ -129,7 +139,7 @@ function quickSort(uint[] memory arr, int left, int right)
 function getAverage(uint[] memory arr)
 ```
 
-
+Function to return the average value of a given array.
 
 ### `sort`
 
@@ -137,7 +147,7 @@ function getAverage(uint[] memory arr)
 function sort(uint[] memory data)
 ```
 
-
+Calls the quicksort function.
 
 ### `sqrt`
 
@@ -145,7 +155,7 @@ function sort(uint[] memory data)
 function sqrt(uint256 y)
 ```
 
-
+Returns the square root of a number.
 
 ### `getLatestPrice`
 
@@ -153,7 +163,7 @@ function sqrt(uint256 y)
 function getLatestPrice()
 ```
 
-
+This function always returns the latest price which is recorded in the contract for a given synth. 
 
 ### `ConjureMint`
 
@@ -167,7 +177,9 @@ function ConjureMint(
 )
 ```
 
+This is the mint new contract function of the ConjureFactory contract. This will mint a new Conjure contract. 
 
+Will take the name, symbol, owner, and the addresses of the Uniswap oracle and the collateralfactory as an argument. And will set the new contract up, so it can be initialized in the next step.
 
 ### `newFactoryOwner`
 
@@ -175,11 +187,13 @@ function ConjureMint(
 function newFactoryOwner(address payable newOwner)
 ```
 
-
+Function to change the current factory owner. Only available for the current factory owner.
 
 ### `getFactoryOwner`
 
 ```text
 function getFactoryOwner()
 ```
+
+Interface method to get the current factory owner. Used by the Collateral Contract to determine which address the cut of the fees has to be sent to.
 
