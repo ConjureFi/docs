@@ -2,7 +2,7 @@
 
 ### Summary
 
-In Conjure minting a Synth is technically opening a Collateralized Dept Position \(CDP\) working as a loan. If a user wishes to mint a synth they have to come up with a deposit in Ethereum to create the underlying collateralization. 
+In Conjure minting a Synth is technically opening a Collateralized Dept Position \(CDP\) working as a loan. If a user wishes to mint a synth they have to come up with a deposit in Ether to create the underlying collateralization. 
 
 ### Loans
 
@@ -26,7 +26,7 @@ It is the borrowers' responsibility to keep the collateralization level above. I
 
 If the collateralization ratio drops below 120% a loan is at risk of liquidation. Any address can then liquidate or partially liquidate the loan.
 
-If an address wants to liquidate a loan at risk, they have to cover parts of their dept in the form of the synth.
+If an address wants to liquidate a loan at risk, they have to cover parts of their debt in the form of the synth.
 
 The amount to be liquidated is calculated as follows:
 
