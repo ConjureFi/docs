@@ -7,6 +7,7 @@ The CNJ governance organization is responsible for:
 * Deploying new factory implementations for more synthetic asset types and use cases
 * Approving new collateral assets for synths that users can select from
 * Managing the treasury for the Conjure DAO
+* Managing the token list for Conjure's dapp
 
 ## CNJ Token Distribution
 
