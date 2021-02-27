@@ -50,7 +50,7 @@ Here a user can select from a dropdown. There are all currently available chainl
 
 Here a user can supply an ERC20 token address and an Uniswap Oracle will calculate the TWAP price for the token.
 
-**Cuustom**
+**Custom**
 
 If there is no template available for the price it is possible to send custom call data to any contract needed in order to retrieve a price.
 
