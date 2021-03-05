@@ -16,6 +16,8 @@ If a user wants to get their collateral back they have the option to close the l
 
 It is also possible to withdraw parts of the collateral. This will affect the C-Ratio and a user cant withdraw ETH that will make them fall under the desired ratio of 120%.
 
+If an assets price drops to or below 0 then it will not be possible to open any more loans.
+
 ## Collateral
 
 The collateral acts as the underlying value of each loan and is deposited as ETH. In Conjure the system is set to keep a 120% C-Ratio overall loans. If the ratio of a user loan drops below 120% the loan is suspect to liquidation.
