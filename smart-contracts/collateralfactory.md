@@ -1,13 +1,5 @@
 # CollateralFactory.sol
 
-### `setCollateralizationRatio`
-
-```text
-function setCollateralizationRatio(uint256 ratio)
-```
-
-Lets a user set a custom collateralization value between 100% and 1000%.
-
 ### `setIssueFeeRate`
 
 ```text
@@ -15,14 +7,6 @@ function setIssueFeeRate(uint256 _issueFeeRate)
 ```
 
 This function lets a user set the Minting Fee. Values from 0 up to 2.5% are accepted.
-
-### `setMinLoanCollateralSize`
-
-```text
-function setMinLoanCollateralSize(uint256 _minLoanCollateralSize)
-```
-
-Lets a user set a custom loan collateral size of their contract.
 
 ### `setAccountLoanLimit`
 
@@ -32,13 +16,13 @@ function setAccountLoanLimit(uint256 _loanLimit)
 
 This function lets the contract creator set a custom account loan limit. Should not excess 1000.
 
-### `setLiquidationRatio`
+### `setAssetClosed`
 
 ```text
-function setLiquidationRatio(uint256 _liquidationRatio)
+function setAssetClosed() external
 ```
 
-Sets a custom liquidation ratio which has to be higher than 100%. Preset at 120%
+Called by the Conjure Contract if an asset price reaches 0. Restricts new loans from being opened and also no more deposits to existing loans.
 
 ### `getContractInfo`
 
