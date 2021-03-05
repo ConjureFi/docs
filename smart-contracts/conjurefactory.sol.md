@@ -61,26 +61,6 @@ Get the oracle feeds price and norm it in case of mismatching decimals.
 
 Calculate either median price \(single asset\), weighted average price \(basket asset\), or marketcap, sqrt market cap, and divide by the indexdivisor provided.
 
-### `setEthUsdChainlinkOracle`
-
-```text
-function setEthUsdChainlinkOracle(address neworacle)
-```
-
-This function allows setting a new Chainlink price feed oracle for the ETH/USD price Conjure uses.
-
-Only allowed by the contract owner.
-
-### `setUniswapOracle`
-
-```text
-function setUniswapOracle(address newunioracle)
-```
-
-It is possible to set a new Uniswap Oracle to use. 
-
-Only allowed by the contract owner.
-
 ### `burn`
 
 ```text
