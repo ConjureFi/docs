@@ -8,7 +8,9 @@
     function init(
         uint256 mintingFee_,
         uint8 assetType_,
-        uint256 indexdivisor_,
+        // pack variables together because of otherwise stack too depp error
+        uint256[2] memory divisorRatio_,
+        bool inverse_,
         address[] memory oracleAddresses_,
         uint8[] memory oracleTypes_,
         string[] memory signatures_,
@@ -16,17 +18,35 @@
         uint256[] memory values_,
         uint256[] memory weights_,
         uint256[] memory decimals_
-    )
+    ) public
 ```
 
 Initializes the Conjure Asset with mintingFee, the asset Type, and all the oracle-related data.
 
+It also sets the divisor and the C-Ratio for the later generated collateral system.
+
+Aslo there is on indicator which can set the price logic to be inverse.
+
 This function also mints a new instance of the CollateralFactory for the synth and triggers the initial price calculation via getPrice\(\). The array sizes must have equal lengths.
 
-### `getPrice`
+### `getPriced`
 
 ```text
 function getPrice()
+```
+
+Capsules the price logic. Calls the internal price function and checks if the price is an inverse price.
+
+If inverse the logic will be  
+
+`price = _deploymentPrice - (currentPrice - _deploymentPrice)`
+
+Also, set the last observed price and timestamp for that. If an asset price is equal or below 0 then it will trigger the close of the assets collateral system \(no more loan openings\)
+
+### `getPriceInternal`
+
+```text
+function getPriceInternal()
 ```
 
 This function calculates the price in regard to the asset type and all the different oracle types.
