@@ -62,3 +62,9 @@ Finally, it is also possible to supply an already existing Conjure address as a 
 
 The prices are either median or weighted average prices. For the index asset types, we use market cap or square root market cap.
 
+Inverse Assets
+
+If the inverse boolean flag is set to true the price will increase if the tracked assets price decreases and vice versa. It follows this logic:
+
+`price = _deploymentPrice - (currentPrice - _deploymentPrice)`
+
