@@ -7,8 +7,8 @@
 
 ### ETH Rinkeby Deployments
 
-* [Conjure Factory](https://rinkeby.etherscan.io/address/0x904970e4A4eAd57427A772b069a3E6e3A6aA55ef)
-* [Collateral Factory](https://rinkeby.etherscan.io/address/0x2675FF81972b254949c7590aa57E660962202226)
+* [Conjure Factory](https://rinkeby.etherscan.io/address/0x3CB9e461933Ea224F2C47E5D3E42942EF884a86D)
+* [Collateral Factory](https://rinkeby.etherscan.io/address/0xA2105f6f38bcc217F4e0A13A5D4f1FefC7fFfe2e)
 
 ### BSC Mainnet Deployments
 
