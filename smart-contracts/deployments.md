@@ -5,6 +5,10 @@
 * [Conjure Factory](https://etherscan.io/address/0x6Aa9b85cc65b935724e2063BeA3aE6702B9D5146#code)
 * [Collateral Factory](https://etherscan.io/address/0xCA7d01f37B23C82a2F28eacFC0078EB9Bc66dE06#code)
 
+
+
+* [Used UniswapV2 Oracle](https://etherscan.io/address/0xFa5a44D3Ba93D666Bf29C8804a36e725ecAc659A)
+
 ### ETH Rinkeby Deployments
 
 * [Conjure Factory](https://rinkeby.etherscan.io/address/0x3CB9e461933Ea224F2C47E5D3E42942EF884a86D)
