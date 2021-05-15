@@ -27,7 +27,10 @@
 
 ## Polygon Main Net
 
-* Coming Soon
+* [Conjure Implementation](https://explorer-mainnet.maticvigil.com/address/0xC6Da5Fee70AA6A606E4FfD748108C52E16C07444/transactions)
+* [EtherCollateral Implementation](https://explorer-mainnet.maticvigil.com/address/0xBE153Eb48062ba3892C10389844643d37cedA639)
+* [Conjure Factory](https://explorer-mainnet.maticvigil.com/address/0x10EcBAA95Bcc1b73DD790fc9d68E166CD72B2F1C)
+* [Conjure Router](https://explorer-mainnet.maticvigil.com/address/0x6295EC56620444454Dc7147495997Ae9422871e6)
 
 ## ETH Rinkeby Deployments
 
