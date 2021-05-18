@@ -31,6 +31,8 @@
 * [EtherCollateral Implementation](https://explorer-mainnet.maticvigil.com/address/0xBE153Eb48062ba3892C10389844643d37cedA639)
 * [Conjure Factory](https://explorer-mainnet.maticvigil.com/address/0x10EcBAA95Bcc1b73DD790fc9d68E166CD72B2F1C)
 * [Conjure Router](https://explorer-mainnet.maticvigil.com/address/0x6295EC56620444454Dc7147495997Ae9422871e6)
+* [Token Mapped on Polygon](https://explorer-mainnet.maticvigil.com/address/0x2b76F9E7BecC7B4381EEB1894385045B1aA7fBAb/transactions)
+* [Conjure Staking MATIC Rewards Pool](https://explorer-mainnet.maticvigil.com/address/0x6B13053bb82f83a87c6cc139841254170271cb4C/write-contract)
 
 ## ETH Rinkeby Deployments
 
