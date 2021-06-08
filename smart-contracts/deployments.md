@@ -19,9 +19,9 @@
 ### Staking
 
 * [Conjure Staking ETH Rewards Pool](https://etherscan.io/address/0xc8857c35B6f33a1325143D491589cAE01B504f87#code)
-* [XUSD Staking](https://etherscan.io/address/0x9aa6ca73e7f1e5a92d1b67c5faf6fff5043dd375#code)
-* [XCC Staking](https://etherscan.io/address/0xb322ee9a990cfecdfb410911e71b5067ecb47d24#code)
-* [XBTC Staking](https://etherscan.io/address/0xbee66cdfd721f87a6f3c0e4f4922852eb7241d47#code)
+* [Multi Token Staking](https://etherscan.io/address/0xbc4fc253666dc5dde5e15de3bd11deb4b5b2f2a9#code)
+* [Rewards Schedule](https://etherscan.io/address/0x45a68c45bdc4cccac5e1dc097258dc62cb44d659#code)
+* [Airdrop Contract](https://etherscan.io/address/0xf7574f931dc2ec667e5574e1442d8a8439184219#code)
 * [Staking Rewards Implementation](https://etherscan.io/address/0x2211DCcB13370CB088af4a5c57c9a593528Fa05C#code)
 * [Staking Rewards Factory](https://etherscan.io/address/0x69723E3835A3b4DB9D8b94a8D0496e74C3015205#code)
 
