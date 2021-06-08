@@ -11,7 +11,7 @@ The CNJ governance organization is responsible for:
 
 ## CNJ Token Distribution
 
-CNJ is the governance token for Conjure. The initial supply of 10,000,000 CNJ will be distributed as follows:
+[CNJ ](https://etherscan.io/token/0x00a55375002f3cda400383f479e7cd57bad029a9)is the governance token for Conjure. The initial supply of 10,000,000 CNJ will be distributed as follows:
 
 * 20% will go to the founders, investors, and future team members, subject to vesting periods.
 * 25% will be available for liquidity mining beginning in early 2021.
