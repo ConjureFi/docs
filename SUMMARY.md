@@ -7,6 +7,7 @@
 * [Conjure Assets](protocol/conjure-assets.md)
 * [Collateral System](protocol/collateral-system.md)
 * [Governance](protocol/governance.md)
+* [Staking](protocol/staking.md)
 
 ## SMART CONTRACTS
 

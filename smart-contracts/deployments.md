@@ -25,6 +25,12 @@
 * [Staking Rewards Implementation](https://etherscan.io/address/0x2211DCcB13370CB088af4a5c57c9a593528Fa05C#code)
 * [Staking Rewards Factory](https://etherscan.io/address/0x69723E3835A3b4DB9D8b94a8D0496e74C3015205#code)
 
+### Synths
+
+* [xUSD](https://etherscan.io/address/0x1b3be37Ce83539802Cc63919937DDAe3dce8096c#code)
+* [xBTC](https://etherscan.io/address/0x6d9Bde2df9F8420372bb69c2D62349b5b21Af561#code)
+* [xCC](https://etherscan.io/address/0x8a32f6051ae5798B9FaEBD30E951e4aCc2A11015#code)
+
 ## Polygon Main Net
 
 * [Conjure Implementation](https://explorer-mainnet.maticvigil.com/address/0xC6Da5Fee70AA6A606E4FfD748108C52E16C07444/transactions)

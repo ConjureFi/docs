@@ -2,17 +2,13 @@
 
 ## Summary
 
-Conjure lets you allows for user-created synthetic assets based on various oracle price feeds. A user can set up their own arbitrary asset with just 2 transactions, all simplified with a simple User Interface.
+Conjure lets you allows for user-created synthetic assets based on various oracle price feeds. A user can set up their own arbitrary asset with just 1 transaction, all simplified with a simple User Interface.
 
 ## Creation
 
 To start the creation process, a user has to simply put in the name and symbol of the asset they want to create.
 
-This brings up the first transaction in which a brand-new Instance of a Conjure contract is minted. \(The call triggers the [ConjureFactory.sol](../smart-contracts/conjurefactory.sol.md)\). The oracles and type will be set as the 2nd transaction.
-
 ## Initialization
-
-After the first transaction, the instance of the Conjure contract is now ready to be set up.
 
 The user will be presented the following options when they set up their asset:
 
@@ -61,6 +57,10 @@ If there is no template available for the price it is possible to send custom ca
 **Conjure**
 
 Finally, it is also possible to supply an already existing Conjure address as a price feed. The contract will then look it up in the internal system and takes the price from the arbitrary asset.
+
+**Dia**
+
+We also support oracles of the DIA protocol to be used when creating Conjure synths
 
 ## Price Finding
 
