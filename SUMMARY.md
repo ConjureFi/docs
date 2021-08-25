@@ -8,7 +8,10 @@
 * [Collateral System](protocol/collateral-system.md)
 * [Governance](protocol/governance.md)
 * [Staking](protocol/staking.md)
-* [Open Oracle Framework](protocol/open-oracle-framework.md)
+
+## Open Oracle Framework
+
+* [Documentation](open-oracle-framework/open-oracle-framework.md)
 
 ## SMART CONTRACTS
 
