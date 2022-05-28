@@ -1,25 +1,19 @@
 # Table of contents
 
 * [Introduction](README.md)
-
-## Protocol
-
-* [Conjure Assets](protocol/conjure-assets.md)
-* [Collateral System](protocol/collateral-system.md)
-* [Governance](protocol/governance.md)
-* [Staking](protocol/staking.md)
-
-## Open Oracle Framework
-
-* [Documentation](open-oracle-framework/open-oracle-framework.md)
+* [Subscription Based Models](subscription-based-models.md)
+* [Data Feeds for Historical Tracking](data-feeds-for-historical-tracking.md)
+* [Oracle Creation](oracle-creation.md)
+* [Oracle Management](oracle-management.md)
+* [Time Weighted Average Price using OOF](time-weighted-average-price-using-oof.md)
+* [Feed Requests](feed-requests.md)
 
 ## SMART CONTRACTS
 
+* [OpenOracleFramework.sol](smart-contracts/openoracleframework.sol.md)
+* [OOFFactory.sol](smart-contracts/ooffactory.sol.md)
 * [Deployments](smart-contracts/deployments.md)
-* [ConjureFactory.sol](smart-contracts/conjurefactory.sol.md)
-* [CollateralFactory.sol](smart-contracts/collateralfactory.md)
-* [IConjure.sol](smart-contracts/iconjure.sol.md)
-* [IConjureFactory](smart-contracts/iconjurefactory.md)
-* [IEtherCollateral](smart-contracts/iethercollateral.md)
-* [IEtherCollateralFactory](smart-contracts/iethercollateralfactory.md)
 
+## Links
+
+* [Links](links/links.md)
